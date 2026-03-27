@@ -1,21 +1,14 @@
-<h1 align="center">
-  <br>
-  CAPYBARA AI PET
-  <br>
-</h1>
-
 <p align="center">
-  <b>AI-Powered Virtual Pet on ESP32 Microcontroller</b>
-  <br>
-  <i>Deep Neural Network | Real-Time Weather | WiFi Presence Detection | Mini-Games</i>
+  <img src="docs/images/cover.png" alt="ESP32 AIbara — AI-Powered Virtual Capybara Pet" width="100%"/>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-ESP32-blue?style=flat-square&logo=espressif" alt="ESP32"/>
-  <img src="https://img.shields.io/badge/Display-ST7789_135x240-green?style=flat-square" alt="Display"/>
   <img src="https://img.shields.io/badge/AI-Neural_Network_8130_params-orange?style=flat-square" alt="AI"/>
-  <img src="https://img.shields.io/badge/Framework-Arduino+PlatformIO-purple?style=flat-square" alt="Framework"/>
+  <img src="https://img.shields.io/badge/Display-ST7789_135x240-green?style=flat-square" alt="Display"/>
   <img src="https://img.shields.io/badge/Weather-Open--Meteo_API-cyan?style=flat-square" alt="Weather"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/badge/Framework-Arduino+PlatformIO-purple?style=flat-square" alt="Framework"/>
 </p>
 
 ---
@@ -130,6 +123,21 @@ Real temperature with color coding | Weather icon | Real clock | Mood display | 
 ---
 
 ## Neural Network
+
+### Training Pipeline
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐    ┌──────────────────┐
+│   SIMULATION     │    │   TRAINING        │    │   EXPORT         │    │   INFERENCE       │
+│                  │    │                   │    │                  │    │                   │
+│  Expert Policy   │───▶│  Python + NumPy   │───▶│  brain_weights.h │───▶│  ESP32 C++ code   │
+│  500K decisions  │    │  26→96→48→18 NN   │    │  8,130 floats    │    │  <0.1ms forward   │
+│  26 features     │    │  3,000 epochs     │    │  PROGMEM (flash) │    │  pass per decision │
+│  18 behaviors    │    │  Loss: 2.587      │    │  32.5 KB         │    │  No TFLite needed  │
+└─────────────────┘    └──────────────────┘    └─────────────────┘    └──────────────────┘
+```
+
+> **No TensorFlow Lite required.** The neural network forward pass is implemented as pure C++ matrix multiplication (~20 lines). Weights are stored in PROGMEM (flash memory) — zero RAM overhead. This approach is **75x lighter** than TFLite Micro while producing identical results for small networks.
 
 ### Architecture
 ```
