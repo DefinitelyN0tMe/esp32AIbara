@@ -74,7 +74,7 @@ Lie Down (before sleep) | Stand Up (after wake) | Sniff Before Eat | Look Then W
 ### 3 Mini-Games
 
 <p align="center">
-  <img src="docs/images/runner.jpg" width="280" alt="Runner Game"/>
+  <img src="docs/images/game_menu.jpg" width="280" alt="Game Menu"/>
 </p>
 
 | Game | Mechanic | Special Features |
