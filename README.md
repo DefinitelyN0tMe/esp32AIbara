@@ -21,11 +21,11 @@
 ---
 
 <p align="center">
-  <img src="docs/images/home_scene.jpg" width="220" alt="Home Scene"/>
-  &nbsp;&nbsp;
   <img src="docs/images/lake_scene.jpg" width="220" alt="Lake Scene"/>
   &nbsp;&nbsp;
-  <img src="docs/images/game_menu.jpg" width="220" alt="Game Menu"/>
+  <img src="docs/images/home_scene.jpg" width="220" alt="Home Scene"/>
+  &nbsp;&nbsp;
+  <img src="docs/images/runner.jpg" width="220" alt="Runner Game"/>
 </p>
 
 ---
