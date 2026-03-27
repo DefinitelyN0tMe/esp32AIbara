@@ -271,7 +271,5 @@ esp32AIbara/
 ---
 
 <p align="center">
-  <b>Built with Claude Code</b>
-  <br>
-  <i>Hardware: Ideaspark ESP32 + ST7789 TFT | Location: Tallinn, Estonia</i>
+  Built with love by <a href="https://github.com/DefinitelyN0tMe"><b>DefinitelyN0tMe</b></a>
 </p>
